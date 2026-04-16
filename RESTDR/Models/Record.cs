@@ -1,4 +1,4 @@
-﻿namespace RESTDanmarksRadio.Models
+﻿namespace RESTDR.Models
 {
     public class Record
     {

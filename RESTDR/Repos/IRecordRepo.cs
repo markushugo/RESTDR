@@ -1,5 +1,5 @@
-﻿using RESTDanmarksRadio.Models;
-namespace RESTDanmarksRadio.Repos
+﻿using RESTDR.Models;
+namespace RESTDR.Repos
 {
     public interface IRecordRepo
     {

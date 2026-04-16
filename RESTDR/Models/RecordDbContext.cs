@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RESTDanmarksRadio.Models;
+using RESTDR.Models;
 
-namespace RESTDanmarksRadio.Models
+namespace RESTDR.Models
 {
     public class RecordDbContext : DbContext
     {

@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="RESTDR/RESTDR.csproj" />
-  <Project Path="TestProject3/TestProject3.csproj" Id="b882ad3f-291c-469e-bb48-04f64ec66df4" />
+  <Project Path="TestProject3/TestProject3.csproj">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
 </Solution>

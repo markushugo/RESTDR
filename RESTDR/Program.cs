@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using RESTDanmarksRadio.Models;
-using RESTDanmarksRadio.Repos;
+using RESTDR.Models;
+using RESTDR.Repos;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -141,7 +141,7 @@ using (var scope = app.Services.CreateScope())
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.MapGet("/", () => "RESTDanmarksRadio API kører");
+app.MapGet("/", () => "RESTDR API kører");
 
 app.UseCors("AllowAll");
 app.UseAuthentication();

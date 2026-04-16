@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using RESTDanmarksRadio.Models;
-using RecordModel = RESTDanmarksRadio.Models.Record;
-using RESTDanmarksRadio.Repos;
+using RESTDR.Models;
+using RecordModel = RESTDR.Models.Record;
+using RESTDR.Repos;
 using Xunit;
 
 namespace TestProject3

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RESTDanmarksRadio.Models;
-using RESTDanmarksRadio.Repos;
+using RESTDR.Models;
+using RESTDR.Repos;
 
-namespace RESTDanmarksRadio.Controllers
+namespace RESTDR.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
