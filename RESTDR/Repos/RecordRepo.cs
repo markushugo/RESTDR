@@ -1,4 +1,5 @@
 ﻿using RESTDR.Models;
+using System.Globalization;
 
 namespace RESTDR.Repos
 {
@@ -59,10 +60,18 @@ namespace RESTDR.Repos
             return null;
         }
 
-        public IEnumerable<Record> GetAllRecords()
+        public IEnumerable<Record> GetAllRecords(string? artist, string? title)
         {
             IEnumerable<Record> result = records.AsReadOnly();
-            return result;
+            if (artist != null)
+            {
+                result = result.Where(r => r.Artist.Contains(artist, StringComparison.OrdinalIgnoreCase));
+            }
+            if (title != null)
+            {
+                result = result.Where(r => r.Title.Contains(title, StringComparison.OrdinalIgnoreCase));
+            }
+            return result;      
         }
 
 

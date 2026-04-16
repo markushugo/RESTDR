@@ -12,7 +12,7 @@ namespace RESTDR.Repos
             _context = context;
         }
 
-        public IEnumerable<Record> GetAllRecords()
+        public IEnumerable<Record> GetAllRecords(string? artist, string? title)
         {
             return _context.Records.ToList();
         }

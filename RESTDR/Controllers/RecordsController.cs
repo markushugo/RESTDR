@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RESTDR.Models;
 using RESTDR.Repos;
+using System.Globalization;
 
 namespace RESTDR.Controllers
 {
@@ -20,17 +21,12 @@ namespace RESTDR.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [HttpGet]
-        public ActionResult<IEnumerable<Record>> Get()
+        public ActionResult<IEnumerable<Record>> Get([FromQuery] string? artist, [FromQuery] string? titel)
         {
-            IEnumerable<Record> result = _repo.GetAllRecords();
-  
+            return _repo.GetAllRecords(artist, titel).ToList() is List<Record> records && records.Count > 0
+                ? Ok(records)
+                : NoContent();
 
-            if (!result.Any())
-            {
-                return NoContent();
-            }
-
-            return Ok(result);
         }
 
         // GET api/<RecordsController>/5
